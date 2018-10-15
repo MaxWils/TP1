@@ -5,6 +5,9 @@
  */
 package tp1;
 
+import java.util.Arrays;
+import java.util.Random;
+
 /**
  *
  * @author maxim
@@ -42,7 +45,7 @@ public class Etudiant {                             //Classe
         
     
     
-    public void modifier(String ID,float[] tNotes,int taille,String nom,String prénom,float[] Tableau){ 
+    public void modifier(String ID,float[] tNotes,int taille,String nom,String prénom){ 
         
         this.ID = ID;
         this.tNotes = tNotes;
@@ -67,7 +70,23 @@ public class Etudiant {                             //Classe
         this.ID = Identifiant;
     }
     
+    public void Afficher(){
+        for (int k = 0 ; k < getTab().length ; k++){
+            System.out.println("Notes : " + k + " ième " + getTab()[k]);
+        }
+    }
     
-}
+    public void Aleatoire(){
+        Random A = new Random();
+        for (int B = 0 ; B < getTab().length ; B++){
+            float NbrAleatoire = A.nextInt(20);
+            tNotes[B] = NbrAleatoire;
+        }
+    }
+    
+    public void Trier(float[] Croissant){
+        Arrays.sort(Croissant);
+    }
 
+}
 

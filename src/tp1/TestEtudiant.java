@@ -57,6 +57,17 @@ public class TestEtudiant {
         
         System.out.println(etudiant2.getIdentifiant()+ " " + etudiant2.nom + " " + etudiant2.prénom);
               
+        etudiant1.modifier(clavier1, tab, a, clavier2, clavier3);
+        
+        etudiant1.setTab(tab);
+        
+        
+        //for (int k = 0 ; k < tab.length ; k++){
+        //    System.out.println("Notes : " + k + "eme " + tab[k]);
+        //}
+        etudiant1.Afficher();
+        
+        
         
 }
 }
